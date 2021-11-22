@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miStay</title>
+    <!-- jqueryUi css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/dot-luv/jquery-ui.min.css" integrity="sha512-hGYkKzSMWaKWJ0MGIVy3h8Dk1VlEOQhR4NFB18jH3KCSzOhH5Zg6T54f526ne8eZVTlnFMcieY7Zlad9glJ9Mw==" crossorigin="anonymous" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<section class="whole-page">
+        <div class="whole-page__header-container">
+            <a href="index.html"><h1 class="whole-page__header">mi<span>S</span>tay</h1></a>
+        </div>
+
+    <div class="page-container">
+        <div class="search">
+            <div class="search__header-container">
+                <div class="search__header-subcontainer"><h2 class="search__header">Find your stay:</h2></div>
+                <div class="search__header-subcontainer-empty"></div>
+            </div>
+            <div class="search__content">
+                <div class="search__content-container">
+                    <form class="main-form" action="">
+                            <div class="main-form__form-item">
+                                <label for="guests">Guests:</label>
+                                <select class="main-form__input" name="guests" id="guests">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="main-form__form-item">
+                                <label for="checkInDate">Check In:</label>
+                                <input class="main-form__input" id="checkInDate" type="text">
+                            </div>
+                            <div class="main-form__form-item">
+                                <label for="checkIOutDate">Check Out:</label>
+                                <input class="main-form__input" id="checkOutDate" type="text">
+                            </div>
+                            <div class="main-form__form-item">
+                                <label for="maxPrice">Max Price:</label>
+                                <select class="main-form__input" name="maxPrice" id="price">
+                                    <option value="99999">Any</option>
+                                    <option value="100">$100</option>
+                                    <option value="150">$150</option>
+                                    <option value="200">$200</option>
+                                </select>
+                            </div>
+                        <input id="searchBtn" class="main-form__btn" type="submit" value="SEARCH">
+                    </form>
+                    <!-- <div class="accordion" id="accordionExample">
+                        
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+              <div class="modal-content">
+                <div class="modal-header modal__header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-info"></div>
+                    <div class="container-fluid modal__map">
+                        <div id="map">
+                    
+                        </div>
+                      </div>
+                </div>
+                
+                <div class="modal-footer modal__footer">
+                    
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        
+
+        
+      
+        <div class="accom-container">
+
+        </div>
+            <!-- <div class="accom-card">
+                <img src="./img/cordis1.jpeg" alt="">
+                <div class="accom-card__content">
+                    <div class="accom-card__info-container-top">
+                        <h1 class="accom-card__heading">Cordis Auckland</h1>                        
+                    </div>
+                    <div class="accom-card__info-container">
+                        <div class="accom-card__location">
+                            <i class="accom-card__fas fas fa-map-marker-alt"></i>
+                            <p class="accom-card__text">Auckland City Centre</p>
+                        </div>
+                        <div class="accom-card__price">
+                            <h4 class="accom-card__price-text">$157 per night</h4>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        <div class="page-container__footer">
+            <a href="#"><img class="footer__logo-img" src="./img/TNZlogo-white.png" alt=""></a>
+        </div>
+    </div>
+
+</section>
+
+    <!-- use downloaded jquery minified version for goole maps to work -->
+    <script src="./jquery-3.5.1.min.js"></script>
+
+    <!-- script jquery ui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Script -->
+    <script src="./js/mapKey.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

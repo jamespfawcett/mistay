@@ -1,0 +1,70 @@
+@import "var";
+
+
+// PINK BUTTONS
+@mixin pink-btn {
+    border: none;
+    font-weight: 800;
+    border-radius: 1rem;
+    color: white;
+    background: $pink;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    // box-shadow: 3px 3px 5px #5a5a5a;
+
+}
+
+@mixin pink-btn-hover {
+    border: none;
+    font-weight: 800;
+    border-radius: 1rem;
+    color: white;
+    background: $light-pink;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    // box-shadow: 6px 6px 5px #5a5a5a;
+    // transform: translate(-3px, -3px) scale(1.04);    
+}
+
+@mixin pink-btn-active{
+    border: none;
+    font-weight: 800;
+    border-radius: 1rem;
+    color: white;
+    background: $pink;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    // box-shadow:         inset 0 0 10px $pink;
+    transform: scale(0.96);    
+}
+
+// WHITE BUTTONS
+@mixin white-btn {
+    border: none;
+    font-weight: 800;
+    border-radius: 1rem;
+    color: $pink;
+    background: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    // box-shadow: 3px 3px 5px #5a5a5a;
+
+}
+
+@mixin white-btn-hover {
+    border: none;
+    font-weight: 800;
+    border-radius: 1rem;
+    color: $light-pink;
+    background: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    // box-shadow: 6px 6px 5px #5a5a5a;
+    // transform: translate(-3px, -3px) scale(1.04);    
+}
+
+@mixin white-btn-active{
+    border: none;
+    font-weight: 800;
+    border-radius: 1rem;
+    color: white;
+    background: $pink;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    // box-shadow:         inset 0 0 10px $pink;
+    transform: scale(0.96);    
+}

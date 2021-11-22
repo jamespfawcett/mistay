@@ -1,0 +1,76 @@
+@import "var";
+@import "mixins";
+
+.search{
+
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+
+    &__content{
+        background: $translucent;
+        padding: 2rem;
+        border-radius: $border-radius-primary;
+        font-size: 1rem;
+        font-weight: 700;
+        backdrop-filter: blur(2px);
+    }
+
+    &__header-container{
+        display: inline-grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    &__header-subcontainer{
+        grid-column: 1/1;
+        grid-row: 1/1;
+    }
+
+    &__header-subcontainer-empty{
+        grid-column: 2/3;
+        grid-row: 1/1;
+    }
+    
+    &__header{
+        font-size: 2rem;
+        font-weight: 700;
+        background: $translucent;
+        border-radius: $border-radius-primary;
+        padding: 0.6rem 2rem 0.6rem 2rem;
+        backdrop-filter: blur(2px);
+        // padding: 1rem;
+        // border-radius: $border-radius-primary;
+    }
+    
+    
+}
+
+.main-form{
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &__input{
+        margin-right: 1rem;
+        padding: 0.2rem;
+        
+    }
+
+    &__btn{
+        @include pink-btn;
+        transition: 0.1s ease-in-out;
+    }
+
+    &__btn:hover{
+        @include pink-btn-hover;
+        transition: 0.1s ease-in-out;
+    }
+
+    &__btn:active{
+        @include pink-btn-active;
+        transition: 0.1s ease-in-out;
+    }
+}
