@@ -1,9 +1,16 @@
 @import "var";
 @import "mixins";
 
+.col-md-4, .col-md-6{
+    @media #{$tablet}{
+        width: 100%;
+    }
+}
 
 .modal{
-    
+    // &__row{
+    //     background: rgb(241, 241, 241);
+    // }
     &__header{
         background: $pink;
         color: white;
@@ -12,6 +19,12 @@
     &__heading{
         font-weight: 700;
         // border-bottom: solid 2px rgb(235, 235, 235);
+        @media #{$tablet}{
+            padding-top: 1rem;
+        }
+        @media #{$mobile}{
+            padding-top: 1rem;
+        }
     }
     &__name{
         font-weight: 900;
@@ -21,8 +34,10 @@
         background-color: $translucent;
     }
     &__price{
+        padding-top: 0.5rem;
         font-weight: 800;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        font-style: italic;
     }
     &__description{
         // padding: 1rem;
@@ -37,14 +52,76 @@
         @include pink-btn-active;
     }
     &__information-container{
-        padding-top: 3rem;
+        margin-top: 1.5rem;
     }
-    
-    
+    &__text{
+        margin-bottom: 0.2rem;
+    }
+    &__text-meal{
+        font-weight: 700;
+        font-style: italic;
+    }
+    &__map-heading{
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    &__map-location{
+        margin-top: 1rem;
+    }
+    &__location{
+        display: flex;
+        align-items: flex-end;
+    }
+    &__location-city{
+        // margin-left: 1rem;
+    }
+    &__row{
+        @media #{$tablet}{
+            display: block;
+        }
+    }
 }
+
+.confirmation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    @media #{$mobile}{
+        padding: 1rem;
+    }
+
+    &__check{
+        font-size: 4rem;
+        color: green;
+    }
+    &__text span{
+        font-weight: 800;
+    }
+    &__button{
+        @include pink-btn;
+        text-transform: uppercase;
+    }
+    &__button:hover{
+        @include pink-btn-hover
+    }
+    &__button:active{
+        @include pink-btn-active
+    }
+}
+
+.meal-checkbox{
+    &__price{
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+}
+
 #map{
-    height: 300px;
-    width: 600px;
+    margin-top: 1rem;
+    height: 400px;
+    width: 100%;
     background: red;
 }
 .amenities-item p{
@@ -60,6 +137,36 @@
 .amenities-item i{
     font-size: 1.5rem;
 }
+
+.amenities-see-more{
+    text-decoration: underline;
+    font-weight: 200;
+    padding: 0.5rem;
+}
+.img-fluid{
+    object-position: center;
+    object-fit: cover;
+}
+.carousel{
+    &__inner{
+        height: 280px;
+        object-fit: cover;
+        object-position: center;
+        @media #{$tablet}{
+            height: auto;
+        }
+        @media #{$mobile}{
+            height: auto;
+        }
+    }   
+    &__item{
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+    }
+}
+
+
 
 
 
