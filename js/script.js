@@ -1,40 +1,4 @@
 
- console.log('linked');
-//  if($('.accom-container').innerHTML = ''){
-//   alert('asoudhalsd');
-// }
-
-// how to check if html div is empty
-
-// const elem = document.querySelector(".accom-container")
-// console.log(elem.childNodes.length)
-
-// if(elem.childNodes.length == 0){
-//   alert('why you do this');
-// }
-
-//  ================
-//  TO DO LIST
-//  ================
-
-// add sorting options
-// drop down for extra filters
-// add hamburger menu
-// Add properties to array
-// Add pictures to gallery
-// Style the search filters
-// Styled error alerts
-// YHA 1-1 nights error
-// =================
-
-
-//  Air BNB Link
-//  https://www.airbnb.co.nz/rooms/17832389?check_in=2021-11-10&check_out=2021-11-11&translate_ugc=false&federated_search_id=860b253b-d202-4d34-9def-e7286f13cade&source_impression_id=p3_1635816061_fv1H%2B3xbg3Wy4v3i&guests=1&adults=1
-
-
-
-
-
 // =====================
 // GLOBAL VARIABLES
 // =====================
@@ -65,12 +29,6 @@ let accom = [
     description: 'At the heart of Auckland’s lively uptown area, Cordis, Auckland by Langham Hospitality Group puts the city’s fashionable boutiques, galleries and museums within easy reach, so you can make the most of your day. Whether you’re travelling for work, family or leisure, a stay at Cordis, Auckland by Langham Hospitality Group lets you embrace your Auckland adventure in style.',
     amenities: ["<div class='amenities-item'><i class='fas fa-wifi'></i><p>Wi-Fi</p></div> <div class='amenities-item'><i class='fas fa-swimmer'></i><p>Swimming Pool</p></div> <div class='amenities-item'><i class='fas fa-parking'></i><p>On-Site Parking</p></div> <div class='amenities-item'><i class='fas fa-concierge-bell'></i><p>Room Service</p></div>"],
     meals: ['Buffet Breakfast', 15],
-    // meals: [
-    //   {meal: "Continental Breakfast",
-    //   mealCost: 15,},
-    //   {meal: "Buffet Breakfast",
-    //   mealCost: 20,},
-    // ],
   },
   {
     id: 2,
@@ -176,6 +134,10 @@ function initMap(center){
 
 // END OF DATE PICKER
 
+// ======================
+// END OF INIT MAP
+// ======================
+
 // MAPS AND MARKERS
 
 map = new google.maps.Map(document.getElementById('map'),{
@@ -186,16 +148,14 @@ map = new google.maps.Map(document.getElementById('map'),{
 
 //  END OF MAPS & MARKERS
 
-// ======================
-// END OF INIT MAP
-// ======================
+
 
 function dateDiff(){
     let start = $(checkInDate).datepicker('getDate');
     let end = $(checkOutDate).datepicker('getDate');
     // calculation to get readable days
     let nights = (end - start)/1000/60/60/24;
-    console.log(nights);
+    
     
 }
 
@@ -233,7 +193,6 @@ function modal(_nights){
             
             initMap(location);
 
-            console.log(location);
             let marker = new google.maps.Marker({
               position: location,
               map:map
@@ -396,7 +355,7 @@ function reloadMarkers(){
       markers[i].setMap(null);
   }
   markers=[];
-  console.log(markers);
+
 }
 
 // ====================================
@@ -486,7 +445,7 @@ function calculateSearch(event){
 
 function checkInData(nightsBooked, peopleBooked, priceLimit){
     const elem = document.querySelector(".accom-container")
-  console.log(elem.childNodes.length)
+  
   $('.accom-container').empty();
 
   for(let i = 0; i < accom.length; i++){
@@ -496,8 +455,7 @@ function checkInData(nightsBooked, peopleBooked, priceLimit){
       
   }
    
-  // const elem = document.querySelector(".accom-container")
-// console.log(elem.childNodes.length)
+
 
 if(elem.childNodes.length == 0){
   $('.accom-container').append(

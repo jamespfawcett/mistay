@@ -1,6 +1,10 @@
 @import "var";
 @import "mixins";
 
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
 .search{
 
     padding-top: 5vh;
